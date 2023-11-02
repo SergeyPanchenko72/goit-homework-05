@@ -474,7 +474,7 @@
 
     <!-- ___________MODAL____________ -->
 
-    <div class="backdrop is-ope">
+    <div class="backdrop is-open">
       <div class="modal">
         <button class="modal-close-button" type="button">
           <svg class="modal-close-button-icon" width="8" height="8">
@@ -483,24 +483,24 @@
         </button>
         <p class="modal-text">Leave your contacts and we will call you back</p>
         <form class="modal-form">
-          <div class="input-container">
-            <label class="modal-label" for="name">Name</label>
+          <div class="modal-form-input-container">
+            <label class="modal-label" for="user-name">Name</label>
             <div class="modal-container">
               <input
                 class="modal-input"
                 type="text"
-                name="name"
-                id="name"
+                name="user-name"
+                id="user-name"
                 required
                 pattern="[a-zA-Zа-яА-ЯіІєЄїЇ'йЙ]+"
                 title="Mark"
               />
-              <svg class="modal-icon" width="18" height="18">
+              <svg class="modal-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
               </svg>
             </div>
           </div>
-          <div class="input-container">
+          <div class="modal-form-input-container">
             <label class="modal-label" for="phone">Phone</label>
             <div class="modal-container">
               <input
@@ -517,7 +517,7 @@
               </svg>
             </div>
           </div>
-          <div class="input-container">
+          <div class="modal-form-input-container">
             <label class="modal-label" for="email">Email</label>
             <div class="modal-container">
               <input class="modal-input" type="email" name="email" id="email" required />
@@ -526,12 +526,12 @@
               </svg>
             </div>
           </div>
-          <div class="input-container">
-            <label class="modal-label" for="message">Comment</label>
+          <div class="modal-form-input-container">
+            <label class="modal-label" for="user-commen">Comment</label>
             <textarea
               class="modal-message"
-              name="message"
-              id="message"
+              name="user-commen"
+              id="user-commen"
               placeholder="Text input"
             ></textarea>
           </div>
@@ -539,12 +539,12 @@
             <input
               class="form-checkbox visually-hidden"
               type="checkbox"
-              name="user_policy"
-              id="user-policy"
+              name="user-privacy"
+              id="user-privacy"
               value="true"
               required
             />
-            <label class="form-checkbox-label" for="user-policy">
+            <label class="form-checkbox-label" for="user-privacy">
               <span class="rewiew-form-own-checkbox">
                 <svg class="rewiew-form-own-checkbox-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-checkmark"></use>

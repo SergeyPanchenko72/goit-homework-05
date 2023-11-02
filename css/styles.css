@@ -573,10 +573,13 @@ button {
   transform: translate(-50%, -50%);
   padding: 72px 24px 24px 24px;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   border: 4px solil #000000;
   border-radius: 4px;
   background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button-icon {
@@ -592,14 +595,18 @@ button {
   height: 24px;
   justify-content: center;
   align-items: center;
+  padding: 0;
   background-color: #e7e9fc;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-close-button:focus,
 .modal-close-button:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-close-button:focus .modal-close-button-icon {
@@ -618,7 +625,10 @@ button {
 .modal-form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+}
+
+.modal-form-input-container {
+  margin-bottom: 8px;
 }
 .modal-label {
   display: block;
@@ -640,6 +650,7 @@ button {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   padding-left: 38px;
+  background-color: transparent;
   outline-color: transparent;
   outline-offset: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -676,6 +687,9 @@ button {
   letter-spacing: 0, 04;
   margin: 0 auto;
 }
+.modal-form-input-container {
+  margin-bottom: 16px;
+}
 .modal-message {
   width: 100%;
   height: 120px;
@@ -684,11 +698,13 @@ button {
   font-weight: 400;
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   resize: none;
   outline-color: transparent;
   outline-offset: 4px;
+  background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -699,6 +715,11 @@ button {
 .modal-message:focus {
   border-color: #4d5ae5;
 }
+
+.form-checkbox-wrapper {
+  margin-bottom: 24px;
+}
+
 .form-checkbox-label {
   color: #8e8f99;
   font-size: 12px;
@@ -712,17 +733,19 @@ button {
   align-items: center;
   width: 16px;
   height: 16px;
+  border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
-  /* background-color: #404bbf; */
   cursor: pointer;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .privacy-policy {
   color: #4d5ae5;
 }
 .form-checkbox:checked + .form-checkbox-label .rewiew-form-own-checkbox {
   background-color: #404bbf;
-  border-color: #404bbf;
+  border: none;
   fill: #f4f4fd;
 }
