@@ -687,8 +687,8 @@ button {
   letter-spacing: 0, 04;
   margin: 0 auto;
 }
-.modal-form-input-container {
-  margin-bottom: 8px;
+.modal-form-textarea-container {
+  margin-bottom: 16px;
 }
 .modal-message {
   width: 100%;
