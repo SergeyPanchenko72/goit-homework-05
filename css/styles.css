@@ -469,11 +469,6 @@ button {
   margin-right: 80px;
 }
 
-.footer-subscribe {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
 .footer-email-container {
   display: flex;
   gap: 24px;
@@ -491,6 +486,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer-email-input::placeholder {
@@ -514,7 +510,9 @@ button {
   gap: 24px;
 }
 .footer-subscribe-button {
-  display: inline-flex;
+  display: flex;
+  min-width: 165px;
+  height: 40px;
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
@@ -527,6 +525,7 @@ button {
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.04em;
+  border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -541,6 +540,10 @@ button {
   font-weight: 400;
   line-height: 2; /* 200% */
   letter-spacing: 0.04em;
+
+  .footer-card-icon {
+    margin-left: 16px;
+  }
 }
 /* ==========BACKDROP============ */
 .backdrop {
